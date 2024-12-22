@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="generator-container">
+        <div class="thumbnail-section">
+            <div class="thumbnail-preview" id="thumbnailPreview">
+                <img id="thumbnailImage" alt="" style="display: none;">
+                <span class="thumbnail-text" id="thumbnailText">Your Text Here</span>
+            </div>
+        </div>
+
+        <div class="options-section">
+        <div class="form-group">
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#2e2e2e">
+        </div>
+
+        <div class="form-group">
+            <label for="text">Thumbnail Text:</label>
+            <input type="text" id="text" placeholder="Enter text">
+        </div>
+
+        <div class="form-group">
+            <label for="font">Font Family:</label>
+            <select id="font">
+                <option value="Poppins">Poppins</option>
+                <option value="Roboto">Roboto</option>
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Text Size:</label>
+            <div class="size-controls">
+                <input type="range" id="textSize" min="20" max="100" value="40">
+                <span id="textSizeValue">40px</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Text Color:</label>
+            <input type="color" id="textColor" value="#ffffff">
+        </div>
+
+        <div class="form-group">
+            <label for="image">Upload Image:</label>
+            <input type="file" id="image" accept="image/*">
+        </div>
+
+        <div class="form-group">
+            <label>Image Size:</label>
+            <div class="size-controls">
+                <input type="range" id="imageSize" min="10" max="100" value="90">
+                <span id="imageSizeValue">90%</span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Border Size:</label>
+            <div class="border-controls">
+                <input type="number" id="borderSize" min="0" max="50" value="2">
+                <input type="color" id="borderColor" value="#444444">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="generate" id="generateBtn">Generate</button>
+            <button class="clear" id="clearBtn">Clear</button>
+            <button class="download" id="downloadBtn">Download</button>
+        </div>
+    </div>
+</div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
